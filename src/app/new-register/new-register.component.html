@@ -1,0 +1,162 @@
+
+
+
+<form  class="card" #registerForm="ngForm" (ngSubmit)="customerRegistration(registerForm.value)">
+
+    <h5 class="card-title text-center">Registration Form</h5>
+    <p class="require">*Blue colored fields are mandatory*</p>
+
+
+
+<div class="col-md-12 marg form-group ">
+    <label for="firstName">First Name:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="text" id="firstName" class="mandatory form-control col-sm-7" name="firstName" ngModel required>
+    </div>
+</div>
+
+<div class="col-md-12 marg form-group ">
+  <label for="middleName">Middle Name:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">👤</div>
+    </div>
+    <input type="text" id="middleName" name="middleName" class="form-control col-sm-7" ngModel>
+  </div>
+</div>
+
+<div class="col-md-12 marg form-group">
+  <label for="lastName">Last Name:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">👤</div>
+    </div>
+    <input type="text" id="lastName" class="mandatory form-control col-sm-7" name="lastName" ngModel required>
+  </div>
+</div>
+<div class="col-md-12 marg form-group">
+    <label for="dob">Date Of Birth:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🗓</div>
+      </div>
+      <input type="date" id="dob" class="mandatory form-control col-sm-7" name="dateOfBirth" ngModel>
+    </div>
+</div>
+
+<p class="col-md-5 marg" style="color: blue;">Gender:</p>
+<div class="marg">
+  <input type="radio" id="male" name="gender" value="male" class="col-md-1 mandatory" required ngModel>
+  <label for="male">Male 👨</label><br>
+  <input type="radio" id="female" name="gender" value="female" class="col-md-1 mandatory" required ngModel>
+  <label for="female">Female 👩</label><br>
+  <input type="radio" id="other" name="gender" value="other" class="col-md-1 mandatory" required ngModel>
+  <label for="other">Others</label><br>
+</div>
+
+
+<div class="col-md-12 marg form-group">
+    <label for="contactNumber">Contact Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">☎</div>
+      </div>
+      <input type="text" id="contactNumber" class="mandatory form-control col-sm-7" name="contactNumber" ngModel required>
+    </div>
+</div>
+<div class="col-md-12 marg form-group">
+    <label for="email">Email ID:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">📧</div>
+      </div>
+      <input type="text" id="email" name="email" class="form-control col-sm-7 mandatory" ngModel required>
+    </div>
+</div>
+
+
+
+<div class="col-md-12 marg form-group">
+  <label for="occupation">Occupation:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">👔</div>
+    </div>
+    <input type="text" id="occupation" class="mandatory form-control col-sm-7" name="occupation" ngModel required>
+    </div>
+</div>
+
+<div class="col-md-12 marg form-group">
+    <label for="addressLine1">Address Line 1:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🏡</div>
+      </div>
+      <input type="text" id="addressLine1" class="mandatory form-control col-sm-7" name="addressLine1" ngModel required>
+    </div>
+</div>
+<div class="col-md-12 marg form-group">
+  <label for="addressLine2">Address Line 2:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">🏡</div>
+    </div>
+    <input type="text" id="addressLine2" class="form-control col-sm-7" name="addressLine2" ngModel>
+  </div>
+</div>
+<div class="col-md-12 marg form-group">
+  <label for="state">State:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">🏡</div>
+    </div>
+    <input type="text" id="state" class="mandatory form-control col-sm-7" name="state" ngModel required>
+  </div>
+</div>
+<div class="col-md-12 marg form-group">
+  <label for="city">city:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">🏡</div>
+    </div>
+    <input type="text" id="city" class="mandatory form-control col-sm-7" name="city" ngModel required>
+  </div>
+</div>
+<div class="col-md-12 marg form-group">
+  <label for="nation">Nation:</label>
+  <div class="input-group mb-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">🏡</div>
+    </div>
+    <input type="text" id="nation" class="mandatory form-control col-sm-7" name="nation" ngModel required>
+  </div>
+</div>
+<div class="col-md-12 marg form-group">
+    <label for="password">New Password:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🔑</div>
+      </div>
+      <input type="password" id="password" class="mandatory form-control col-sm-7" name="password" ngModel required>
+    </div>
+</div>
+
+
+<label class="col-md-12 marg form-group">Select Account Type 💲:</label>
+<select name="accountType" id="accountType" class="col-sm-5 account mandatory form-control" ngModel required>
+    <option value="no" disabled>-----select-----</option>
+    <option value="Savings">Savings Bank</option>
+    <option value="Reoccuring">Reoccuring Deposit</option>
+    <option value="Fixed Deposit">Fixed Deposit</option>
+    <option value="soon" disabled>Coming Soon</option>
+</select><br>
+
+<div class="btn-group" id="buttons">
+<button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Create</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+</div>
+</form>
+
+

@@ -1,0 +1,101 @@
+
+<form  class="card text-white addform" #utilityForm="ngForm" (ngSubmit)="addUtilityDetails(utilityForm.value)">
+    <h5 class="card-title text-center">Add Utility Bill</h5>
+      
+  
+  <div class="col-md-12 marg form-group ">
+      <label for="remittanceName">Remittance Name:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">👤</div>
+        </div>
+        <input type="text" id="remittanceName" class="mandatory form-control col-sm-7" name="remittanceName" ngModel required>
+      </div>
+  </div>
+
+  
+  <label class="col-md-12 marg form-group">Card Type 💲:</label>
+  <select name="cardName" id="cardName" class="col-sm-5 account mandatory form-control" ngModel required>
+    <option value="no" disabled>-----select-----</option>
+    <option value="Debit Card">Debit Card</option>
+    <option value="Credit Card">Credit Card</option>
+    <option value="Prepaid Card">Prepaid Card</option>
+  </select><br>
+
+  <div class="col-md-12 marg form-group ">
+    <label for="cardNumber">Card Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="number" id="cardNumber" class="mandatory form-control col-sm-7" name="cardNumber" ngModel required>
+    </div>
+</div>
+
+<div class="col-md-12 marg form-group ">
+    <label for="expireDate">Expiry Date:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="date" id="expireDate" class="mandatory form-control col-sm-7" name="expireDate" ngModel required>
+    </div>
+</div>
+
+<div class="col-md-12 marg form-group ">
+    <label for="cvv">CVV Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="number" id="cvv" class="mandatory form-control col-sm-7" name="cvv" ngModel required>
+    </div>
+</div>
+  
+  <div class="btn-group" id="buttons">
+      <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Add</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+  </div>
+  
+  
+  </form>
+  
+  <form   class="card text-white deleteform"  #deleteform="ngForm"   (ngSubmit)="removeUtility(deleteform.value)" id="delete"  >
+  <div class="form-group">
+    <label id="delLab">Remittance ID:</label>
+    <input type="number" id="deleteInp" class="form-control col-sm-8" name="remittanceId"  ngModel required>
+    
+  </div>
+  
+  
+  
+  <button type="submit" class="btn btn-danger col-sm-5" id="delbtn">Delete</button>
+  </form>
+  <div class="tab">
+  <table class="table" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+  
+    <tr> 
+    <th>Remittance ID</th>
+    <th>Remittance Name</th>
+    <th>Card Type</th>
+    <th>Card Number</th>
+    <th>Expiry Date</th>
+    <th>CVV</th>
+  </tr>
+  
+    <tr *ngFor="let utility of utilityList">
+  
+            <td>{{utility.remittanceId}}</td>
+            <td>{{utility.remittanceName}}</td>
+            <td>{{utility.cardName}}</td>
+            <td>{{utility.cardNumber}}</td>
+            <td>{{utility.expireDate}}</td>
+            <td>{{utility.cvv}}</td>
+            
+  
+    </tr>
+  
+  
+  </table>
+  </div>
+
+  

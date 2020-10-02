@@ -1,0 +1,66 @@
+
+<form  class="card text-white" #depositForm="ngForm" (ngSubmit)="getAllDeposit(depositForm.value)">
+  <h5 class="card-title text-center">Deposit Form</h5>
+    
+
+<div class="col-md-12 marg form-group ">
+    <label for="accountNumber">Account Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="number" id="accountNumber" class="mandatory form-control col-sm-7" name="accountNumber" ngModel required>
+    </div>
+</div>
+
+
+
+<div class="col-md-12 marg form-group ">
+    <label for="codeIFSC">IFSC Code:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🔑</div>
+      </div>
+      <input type="text" id="codeIFSC" class="mandatory form-control col-sm-7" name="codeIFSC" ngModel required>
+    </div>
+</div>
+
+<div class="col-md-12 marg form-group ">
+    <label for="amount">Amount:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">💲</div>
+      </div>
+      <input type="number" min="100" step="1000" id="amount" class="mandatory form-control col-sm-7" name="amount" ngModel required>
+    </div>
+</div>
+
+
+<div class="btn-group" id="buttons">
+    <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Submit</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+</div>
+
+</form>
+<div>
+  <table class="table col-md-6" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+  
+      <tr> 
+      <th>Account Number</th>
+      <th>Account Holder Name</th>
+      <th>Available Balance</th>
+      <th>Account Type</th>
+   </tr>
+  
+      <tr *ngFor="let deposit of depositList">
+  
+              <td>{{deposit.accountNumber}}</td>
+              <td>{{deposit.accountHolderName}}</td>
+              <td>{{deposit.accountBalance}}</td>
+              
+  
+      </tr>
+  
+  
+  </table>
+  </div>
+

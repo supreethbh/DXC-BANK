@@ -1,0 +1,117 @@
+
+
+<form  class="card addform" id="addform" #accountDetailsForm="ngForm" (ngSubmit)="addAccount(accountDetailsForm.value)">
+    <h5 class="card-title text-center">Enter Account Details To Add An Account</h5>
+      
+  
+  
+      <div class="col-md-12 marg form-group ">
+          <label for="accountNumber">Account Number:</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">💲</div>
+            </div>
+            <input type="text" id="accountNumber" class="mandatory form-control col-sm-7" name="accountNumber" ngModel required>
+          </div>
+      </div>
+  
+      
+  
+  <div class="col-md-12 marg form-group ">
+      <label for="accountHolderName">Account Holder Name:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">👤</div>
+        </div>
+        <input type="text" id="accountHolderName" class="mandatory form-control col-sm-7" name="accountHolderName" ngModel required>
+      </div>
+  </div>
+  
+  
+  
+  <div class="col-md-12 marg form-group ">
+      <label for="bankIFSC">IFSC Code:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">🔑</div>
+        </div>
+        <input type="text" id="bankIFSC" class="mandatory form-control col-sm-7" name="bankIFSC" ngModel required>
+      </div>
+  </div>
+  
+  <div class="btn-group" id="buttons">
+      <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Add</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+  </div>
+  
+  </form>
+  <form  class="card updateform" id="updateform" #updateform="ngForm" (ngSubmit)="updateAccount(updateform.value)">
+    <h5 class="card-title text-center">Enter Account Details To Update An Account</h5>
+      
+  
+  
+      <div class="col-md-12 marg form-group ">
+          <label for="accountNumber">Account Number:</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">💲</div>
+            </div>
+            <input type="number" id="accountNumber" class="mandatory form-control col-sm-7" name="accountNumber" ngModel required>
+          </div>
+      </div>
+  
+      
+  
+  <div class="col-md-12 marg form-group ">
+      <label for="accountHolderName">Account Holder Name:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">👤</div>
+        </div>
+        <input type="text" id="accountHolderName" class="mandatory form-control col-sm-7" name="accountHolderName" ngModel required>
+      </div>
+  </div>
+
+    
+  <div class="col-md-12 marg form-group ">
+      <label for="bankIFSC">IFSC Code:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">🔑</div>
+        </div>
+        <input type="text" id="bankIFSC" class="mandatory form-control col-sm-7" name="bankIFSC" ngModel required>
+      </div>
+  </div>
+  
+  <div class="btn-group" id="buttons">
+      <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Update</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+  </div>
+  
+  </form>
+
+  <div>
+    <table class="table" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+    
+        <tr> 
+        <th>Account Number</th>
+       
+        <th>Benificiary Name</th>
+        <th>Code IFSC</th>
+      
+        
+        
+     </tr>
+    
+        <tr *ngFor="let transaction of benificiaryList">
+    
+                <td>{{transaction.accountNumber}}</td>
+                <td>{{transaction.accountHolderName}}</td>
+                <td>{{transaction.bankIFSC}}</td>
+              
+     
+                
+    
+        </tr>
+    
+    
+    </table>
+    </div>

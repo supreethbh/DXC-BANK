@@ -1,0 +1,17 @@
+
+
+
+<form class="card col-sm-5 form-group" #CustomerLoginForm="ngForm" (ngSubmit)="checkLogin(CustomerLoginForm.value)">
+    <h5 class="card-title text-center">LOGIN AS CUSTOMER</h5>
+
+<label for="name">Unique Customer ID:</label>
+<input type="text" id="uci" name="uci" class="form-control" required ngModel><br>
+
+<label for="dob">Password:</label>
+<input type="password" id="password" name="password" class="form-control" required ngModel><br>
+
+<div class="btn-group col-md-12" id="buttons">
+    <button  type="submit" class="btn btn-success col-sm-3" id="btn">Login</button><button type="reset" class="btn btn-danger col-sm-3" id="btn">Cancel</button>
+    </div>
+
+</form>

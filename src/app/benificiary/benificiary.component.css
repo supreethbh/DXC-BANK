@@ -1,0 +1,28 @@
+#addform{
+    float: left;
+    padding-right: 0%;
+    margin-right: 1%;
+    padding-bottom: 2%;
+}
+#updateform{
+    float: right;
+    padding-right: 0%;
+    margin-right: 2%;
+    padding-bottom: 2%;
+}
+.marg{
+    margin-left: 12%;
+}
+#btnsub{
+    margin-left: 22%;
+}
+form{
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+}
+.addform{
+    width: 49%;
+}
+.updateform{
+    width: 48%;
+}

@@ -1,0 +1,48 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+    .lft{
+              background-color: lightgoldenrodyellow;
+              float: left;
+              padding-left: 0%;
+              padding-right: 0%;
+              
+              margin-top: 0%;
+              padding-bottom: 19%;
+              width: 15%;
+              margin-left: 0;
+              margin-right: 0%;
+              padding-top: 0%;
+             
+    }
+  
+    .rgt{
+              background-color: lightgoldenrodyellow;
+              float: left;
+              padding-right: 0%;
+              padding-left: 0%;
+              margin-left: 0%;
+              margin-right: 0%;
+              padding-top: 0%;
+              padding-bottom: 12%;
+              width: 10%;
+              
+    }
+    .main{
+      padding-right: 0%;
+      margin-right: 1%;
+      padding-left: 1%;
+      width: 74%;
+      float: left;
+      margin-top: 1%;
+    }
+    a{
+      float: right;
+      margin-right: 5px;
+    }

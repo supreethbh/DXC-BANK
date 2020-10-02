@@ -1,0 +1,93 @@
+
+<form  class="card text-white" #providerDetailsForm="ngForm" (ngSubmit)="addProviderDetails(providerDetailsForm.value)">
+  <h5 class="card-title text-center">Enter Details to Add Service Provider</h5>
+    
+
+<div class="col-md-12 marg form-group ">
+    <label for="serviceProviderName">Service Provider Name:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="text" id="serviceProviderName" class="mandatory form-control col-sm-7" name="serviceProviderName" ngModel required>
+    </div>
+</div>
+
+
+<label class="col-md-12 marg form-group">Select Service Type 💲:</label>
+<select name="serviceType" id="serviceType" class="col-sm-5 account mandatory form-control" ngModel required>
+  <option value="no" disabled>-----select-----</option>
+  <option value="Internet">Internet Service</option>
+  <option value="Telephone">Telephone Service</option>
+  <option value="Water">Water Service</option>
+  <option value="Electricity">Electricity Service</option>
+  <option value="soon" disabled>Coming Soon</option>
+</select><br>
+
+<div class="btn-group" id="buttons">
+    <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Add</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+</div>
+
+
+</form>
+
+<form   class="col-md-6 card text-white"  #deleteform="ngForm"   (ngSubmit)="removeServiceProvider(deleteform.value)" id="delete"  >
+<div class="form-group">
+  <label id="delLab">Service Provider ID:</label>
+  <input type="number" id="deleteInp" class="form-control col-sm-8" name="serviceProviderID"  ngModel required>
+  
+</div>
+
+
+
+<button type="submit" class="btn btn-danger col-sm-5" id="delbtn">Delete</button>
+</form>
+<div class="tab">
+<table class="table col-md-6" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+
+  <tr> 
+  <th>Service Provider ID</th>
+  <th>Service Provider Name</th>
+  <th>Service Type</th>
+</tr>
+
+  <tr *ngFor="let provider of providerList">
+
+          <td>{{provider.serviceProviderID}}</td>
+          <td>{{provider.serviceProviderName}}</td>
+          <td>{{provider.serviceType}}</td>
+
+  </tr>
+
+
+</table>
+</div>
+
+<!--div>
+<form  #deleteProviderForm="ngForm" (ngSubmit)="removeServiceProvider(deleteProviderForm.value)">
+  <div class="form-group">
+<table class="table table-dark  col-md-5" style="background-color: rgba(0, 0, 0, 0.712);">
+  <tr> 
+    <th>Service Provider ID</th>
+  <th>Service Provider Name</th>
+  <th>Service Type</th>
+  </tr>
+  <tr *ngFor="let provider of providerList; let i = index">
+          
+          
+      
+          
+    <td><input type="text" class="form-control" id="serviceProviderID" name="serviceProviderID"  [(ngModel)]="provider.serviceProviderID" required disabled></td>
+    <td>{{provider.serviceProviderName}}</td>
+    <td>{{provider.serviceType}}</td> 
+    <td><button type="submit" class="btn btn-danger">Delete</button></td>
+      
+          
+      
+      </tr>
+
+
+</table>
+</div>
+</form>
+</div-->

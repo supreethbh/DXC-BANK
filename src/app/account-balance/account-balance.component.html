@@ -1,0 +1,22 @@
+<div>
+        <table class="table col-md-12" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+        
+            <tr> 
+            <th>Account Number</th>
+            <th>Account Holder Name</th>
+            <th>Available Balance</th>
+            <th>Account Type</th>
+         </tr>
+        
+            <tr *ngFor="let savings of savingsList">
+        
+                    <td>{{savings.accountNumber}}</td>
+                    <td>{{savings.accountHolderName}}</td>
+                    <td>{{savings.accountBalance}}</td>
+                    <td>{{savings.accountType}}</td>
+        
+            </tr>
+        
+        
+        </table>
+        </div>

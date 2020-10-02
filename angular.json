@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "DXC-PAY"
+    }
+  },
+  "defaultProject": "DXC-PAY",
+  "cli": {
+    "analytics": false
+  }
 }

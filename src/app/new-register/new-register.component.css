@@ -1,0 +1,46 @@
+input{
+    border-color:lightgray;
+    border: 1;
+    width: 50%;
+    
+}
+.account{
+    margin-left: 30%;
+}
+#btn{
+    display: inline-block;
+    margin-right: 5px;
+}
+#buttons{
+    margin-left: 33%;
+    margin-bottom: 10%;
+}
+.mandatory{
+    border-color: blue;
+    border-width: 1;
+}
+.require{
+    margin-left: 10%;
+    color: red;
+}
+form{
+    margin-bottom: 10%;
+}
+.txttag{
+    width:4%;
+}
+.inp{
+    margin-left: 30%;
+}
+#finger{
+    float: left;
+    width: 0%;
+    padding-right: 0%;
+    margin-right: 0%;
+}
+.indpng{
+    width: 70%;
+}
+.marg{
+    margin-left: 20%;
+}

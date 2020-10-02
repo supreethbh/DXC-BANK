@@ -1,0 +1,66 @@
+
+<form  class="card text-white" #savingsDetailsForm="ngForm" (ngSubmit)="addSavingsDetails(savingsDetailsForm.value)">
+    <h5 class="card-title text-center">Enter Account Details To Add An Account</h5>
+      
+  
+  <div class="col-md-12 marg form-group ">
+      <label for="accountHolderName">Account Holder Name:</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">👤</div>
+        </div>
+        <input type="text" id="accountHolderName" class="mandatory form-control col-sm-7" name="accountHolderName" ngModel required>
+      </div>
+  </div>
+  
+  <div class="col-md-12 marg form-group ">
+    <label for="accountBalance">Account Balance:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">👤</div>
+      </div>
+      <input type="number" id="accountBalance" class="mandatory form-control col-sm-7" name="accountBalance" ngModel required>
+    </div>
+</div>
+  
+  
+ 
+
+  <label class="col-md-12 marg form-group">Select Account Type 💲:</label>
+  <select name="accountType" id="accountType" class="col-sm-5 account mandatory form-control" ngModel required>
+    <option value="no" disabled>-----select-----</option>
+    <option value="Savings">Savings Bank</option>
+    <option value="Reoccuring">Reoccuring Deposit</option>
+    <option value="Fixed Deposit">Fixed Deposit</option>
+    <option value="soon" disabled>Coming Soon</option>
+  </select><br>
+  
+  <div class="btn-group" id="buttons">
+      <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Add</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+  </div>
+
+  
+</form>
+<div>
+<table class="table col-md-6" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+
+    <tr> 
+    <th>Account Number</th>
+    <th>Account Holder Name</th>
+    <th>Available Balance</th>
+    <th>Account Type</th>
+ </tr>
+
+    <tr *ngFor="let savings of savingsList">
+
+            <td>{{savings.accountNumber}}</td>
+            <td>{{savings.accountHolderName}}</td>
+            <td>{{savings.accountBalance}}</td>
+            <td>{{savings.accountType}}</td>
+
+    </tr>
+
+
+</table>
+</div>
+

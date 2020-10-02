@@ -1,0 +1,54 @@
+
+<form  class="card" #kycForm="ngForm" (ngSubmit)="addKYC(kycForm.value)">
+
+  <h5 class="card-title text-center">KYC Form</h5>
+    
+  <div class="col-md-12 marg form-group ">
+    <label for="customerName">Customer Name:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🔑</div>
+      </div>
+      <input type="text" id="customerName" class="mandatory form-control col-sm-7" name="customerName" ngModel required>
+    </div>
+</div>
+
+    <div class="col-md-12 marg form-group ">
+        <label for="aadhaarNumber">Aadhaar Number:</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">🔑</div>
+          </div>
+          <input type="text" id="aadhaarNumber" class="mandatory form-control col-sm-7" name="aadhaarNumber" ngModel required>
+        </div>
+    </div>
+
+    
+
+<div class="col-md-12 marg form-group ">
+    <label for="cardPANNumber">PAN Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">🔑</div>
+      </div>
+      <input type="text" id="cardPANNumber" class="mandatory form-control col-sm-7" name="cardPANNumber" ngModel required>
+    </div>
+</div>
+
+
+
+<div class="col-md-12 marg form-group ">
+    <label for="contactNumber">Contact Number:</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">☎</div>
+      </div>
+      <input type="text" id="contactNumber" class="mandatory form-control col-sm-7" name="contactNumber" ngModel required>
+    </div>
+</div>
+
+<div class="btn-group" id="buttons">
+    <button  type="submit" class="btn btn-success col-sm-3" id="btnsub">Submit</button><button type="reset" class="btn btn-danger col-sm-3" id="btnres">Cancel</button>
+</div>
+
+</form>

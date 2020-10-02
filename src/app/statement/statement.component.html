@@ -1,0 +1,26 @@
+
+
+
+
+<div>
+    <table class="table col-md-10" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+    
+        <tr> 
+        <th>Account Number</th>
+        <th>Account Holder Name</th>
+        <th>Amount</th>
+        <th>Transaction Type</th>
+     </tr>
+    
+        <tr *ngFor="let transaction of transactionList">
+    
+                <td>{{transaction.accountNumber}}</td>
+                <td>{{transaction.accountHolderName}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.transactionType}}</td>
+    
+        </tr>
+    
+    
+    </table>
+    </div>

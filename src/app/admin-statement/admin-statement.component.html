@@ -1,0 +1,32 @@
+
+
+
+
+<div>
+    <table class="table col-md-111" style="background-color: rgba(0, 0, 0, 0.719); color: white;">
+    
+        <tr> 
+        <th>Account Number</th>
+        <th>Account Holder Name</th>
+        <th>Benificiary Name</th>
+        <th>Code IFSC</th>
+        <th>Amount</th>
+        <th>Transaction Type</th>
+        
+     </tr>
+    
+        <tr *ngFor="let transaction of transactionList">
+    
+                <td>{{transaction.accountNumber}}</td>
+                <td>{{transaction.accountHolderName}}</td>
+                <td>{{transaction.benificiaryName}}</td>
+                <td>{{transaction.codeIFSC}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.transactionType}}</td>
+                
+    
+        </tr>
+    
+    
+    </table>
+    </div>

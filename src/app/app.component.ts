@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticateService } from './services/authenticate.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'DXC-PAY';
+  constructor(public loginservice:AuthenticateService){}
+  title = 'GoldenBank';
 }
